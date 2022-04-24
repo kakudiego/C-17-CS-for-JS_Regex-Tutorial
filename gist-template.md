@@ -34,13 +34,13 @@ Anchors are used to check if the matching symbol is the start or end of the stri
 
 ### Quantifiers
 
-Quantifiers are used to specify the number of times that a character or a group of characters are expected to occur in the input string. Two types of quantifiers are supported: `+` (plus sign) and `{n}` (curly braces).
+Quantifiers are used to specify the number of times that a character or a group of characters are expected to occur in the input string. Two types of quantifiers are supported: `+` (plus sign) and `{}` (curly braces).
 
 The `+` symbol matches one or more repetitions of the preceding character.
 
-`[a-z0-9_\.-]+` any character from a to z, 0 to 9, underscore, period, or hyphen is expected to occur at least once
+`[a-z0-9_\.-]+` any character is expected to occur at least once
 
-The `{n}` are used to specify the number of times that a character or a group of characters can be repeated.
+The `{}` are used to specify the number of times that a character or a group of characters can be repeated.
 
 `[a-z\.]{2,6}` match at least 2 times but not most 6 times
 
@@ -58,7 +58,7 @@ Character Classes are used to specify a set of characters that are expected to o
 
 ### Grouping and Capturing
 
-A capturing group is a group of subpatterns that is inside `()` (parentheses).
+A capturing group is a group of sub-patterns that is inside `()` (parentheses).
 
 Group #1: `([a-z0-9_\.-]+)` matches the username
 
@@ -68,12 +68,21 @@ Group #3: `([a-z\.]{2,6})` matches the top level domain
 
 ### Bracket Expressions
 
+Bracket expressions are a list of characters and/or character classes enclosed in brackets [], used to match single characters in a list, or a range of characters in a list.
+
+`[a-z0-9_\.-]` matches any character from a to z, 0 to 9, underscore, dot, or dash
+
+`[\da-z\.-]` matches any digit from 0 to 9, a to z, dot, or dash
+
+`[a-z\.]` matches any character from a to z, or dot
 
 ### Greedy and Lazy Match
 
-### Boundaries
+A `Greedy` quantifier always attempts to repeat the sub-pattern as many times as possible before exploring shorter matches by backtracking. By default, all quantifiers are greedy.
 
-### Back-references
+`+` will match as many times as possible.
+
+`{}` will match exactly n times.
 
 ## Author
 
