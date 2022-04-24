@@ -1,4 +1,4 @@
-# Title (replace with your title)
+# C-17-CS-for-JS_Regex-Tutorial
 
 Introductory paragraph (replace this with your text)
 
@@ -47,3 +47,7 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Author
 
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+
+Diego Kaku is a Web Developer Student at the University of Minnesota Coding Bootcamp.
+
+GitHub profile: https://github.com/kakudiego
