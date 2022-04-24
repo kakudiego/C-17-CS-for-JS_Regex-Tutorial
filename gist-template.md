@@ -1,10 +1,13 @@
 # C-17-CS-for-JS_Regex-Tutorial
 
-Introductory paragraph (replace this with your text)
+This is a tutorial on Regular Expressions (regex) in JavaScript.
+Regular Expressions are a pattern matching language that can be used to match a string against a subject string from left to right.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+In this tutorial, I'm going to explain the Regular Expression (regex) for the validation of an email address.
+
+Matching an Email – `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 ## Table of Contents
 
@@ -24,17 +27,47 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ### Anchors
 
+Anchors are used to check if the matching symbol is the start or end of the string. Two types of anchors are supported: `^` (caret) and `$` (dollar sign).
+
+`/^[a-z]/` check if a matching character is the first character of the input string
+`/[a-z]$/` check if a matching character is the last character in the string
+
 ### Quantifiers
 
-### OR Operator
+Quantifiers are used to specify the number of times that a character or a group of characters are expected to occur in the input string. Two types of quantifiers are supported: `+` (plus sign) and `{n}` (curly braces).
+
+The `+` symbol matches one or more repetitions of the preceding character.
+
+`[a-z0-9_\.-]+` any character from a to z, 0 to 9, underscore, period, or hyphen is expected to occur at least once
+
+The `{n}` are used to specify the number of times that a character or a group of characters can be repeated.
+
+`[a-z\.]{2,6}` match at least 2 times but not most 6 times
 
 ### Character Classes
 
-### Flags
+Character Classes are used to specify a set of characters that are expected to occur in the input string.
+
+`[ABC]` match any of the characters in the brackets
+
+`[a-z] and [0-9]` match a character between a and z or a digit between 0 and 9
+
+`.` match any single character except a line break
+
+`\d` match any digit between 0 and 9. Equivalent to `[0-9]`
 
 ### Grouping and Capturing
 
+A capturing group is a group of subpatterns that is inside `()` (parentheses).
+
+Group #1: `([a-z0-9_\.-]+)` matches the username
+
+Group #2: `([\da-z\.-]+)` matches the domain/email service
+
+Group #3: `([a-z\.]{2,6})` matches the top level domain
+
 ### Bracket Expressions
+
 
 ### Greedy and Lazy Match
 
@@ -42,11 +75,7 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ### Back-references
 
-### Look-ahead and Look-behind
-
 ## Author
-
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
 
 Diego Kaku is a Web Developer Student at the University of Minnesota Coding Bootcamp.
 
